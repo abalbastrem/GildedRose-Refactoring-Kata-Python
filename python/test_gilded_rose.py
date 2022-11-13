@@ -20,29 +20,29 @@ class GildedRoseTest(unittest.TestCase):
         gilded_rose = GildedRose(items)
         gilded_rose.update_quality()
 
-        self.assertEquals("GR1 Apple", items[0].name)
-        self.assertEquals(0, items[0].sell_in)
-        self.assertEquals(9, items[0].quality)
-        self.assertEquals("GR2 Venison meat", items[1].name)
-        self.assertEquals(-4, items[1].sell_in)
-        self.assertEquals(1, items[1].quality)
-        self.assertEquals("GR3 Talking Banana (Conjured)", items[2].name)
-        self.assertEquals(9, items[2].sell_in)
-        self.assertEquals(3, items[2].quality)
-        self.assertEquals("GR4 Apple Conjured", items[3].name)
-        self.assertEquals(-4, items[3].sell_in)
-        self.assertEquals(1, items[3].quality)
+        self.assertEqual("GR1 Apple", items[0].name)
+        self.assertEqual(0, items[0].sell_in)
+        self.assertEqual(9, items[0].quality)
+        self.assertEqual("GR2 Venison meat", items[1].name)
+        self.assertEqual(-4, items[1].sell_in)
+        self.assertEqual(1, items[1].quality)
+        self.assertEqual("GR3 Talking Banana (Conjured)", items[2].name)
+        self.assertEqual(9, items[2].sell_in)
+        self.assertEqual(3, items[2].quality)
+        self.assertEqual("GR4 Apple Conjured", items[3].name)
+        self.assertEqual(-4, items[3].sell_in)
+        self.assertEqual(1, items[3].quality)
 
         gilded_rose.update_quality()
 
-        self.assertEquals("GR1 Apple", items[0].name)
-        self.assertEquals(7, items[0].quality)
-        self.assertEquals("GR2 Venison meat", items[1].name)
-        self.assertEquals(0, items[1].quality)
-        self.assertEquals("GR3 Talking Banana (Conjured)", items[2].name)
-        self.assertEquals(1, items[2].quality)
-        self.assertEquals("GR4 Apple Conjured", items[3].name)
-        self.assertEquals(0, items[3].quality)
+        self.assertEqual("GR1 Apple", items[0].name)
+        self.assertEqual(7, items[0].quality)
+        self.assertEqual("GR2 Venison meat", items[1].name)
+        self.assertEqual(0, items[1].quality)
+        self.assertEqual("GR3 Talking Banana (Conjured)", items[2].name)
+        self.assertEqual(1, items[2].quality)
+        self.assertEqual("GR4 Apple Conjured", items[3].name)
+        self.assertEqual(0, items[3].quality)
 
     def testLimitQuality(self):
         items = [
@@ -52,10 +52,10 @@ class GildedRoseTest(unittest.TestCase):
         gilded_rose = GildedRose(items)
         gilded_rose.update_quality()
 
-        self.assertEquals("GR1 Apple", items[0].name)
-        self.assertEquals(0, items[0].quality)
-        self.assertEquals("GR2 Venison meat", items[1].name)
-        self.assertEquals(50, items[1].quality)
+        self.assertEqual("GR1 Apple", items[0].name)
+        self.assertEqual(0, items[0].quality)
+        self.assertEqual("GR2 Venison meat", items[1].name)
+        self.assertEqual(50, items[1].quality)
 
     def testAgedBrie(self):
         items = [
@@ -65,16 +65,16 @@ class GildedRoseTest(unittest.TestCase):
         gilded_rose = GildedRose(items)
         gilded_rose.update_quality()
 
-        self.assertEquals(21, items[0].quality)
-        self.assertEquals(21, items[1].quality)
+        self.assertEqual(21, items[0].quality)
+        self.assertEqual(21, items[1].quality)
 
     def testSulfuras(self):
         items = [Sulfuras("Sulfuras, Hand of Ragnaros", 99, 99)]
         gilded_rose = GildedRose(items)
         gilded_rose.update_quality()
 
-        self.assertEquals("Sulfuras, Hand of Ragnaros", items[0].name)
-        self.assertEquals(80, items[0].quality)
+        self.assertEqual("Sulfuras, Hand of Ragnaros", items[0].name)
+        self.assertEqual(80, items[0].quality)
 
     def testBackstagePasses(self):
         items = [
@@ -87,11 +87,11 @@ class GildedRoseTest(unittest.TestCase):
         gilded_rose = GildedRose(items)
         gilded_rose.update_quality()
 
-        self.assertEquals(11, items[0].quality)
-        self.assertEquals(12, items[1].quality)
-        self.assertEquals(13, items[2].quality)
-        self.assertEquals(13, items[3].quality)
-        self.assertEquals(0, items[4].quality)
+        self.assertEqual(11, items[0].quality)
+        self.assertEqual(12, items[1].quality)
+        self.assertEqual(13, items[2].quality)
+        self.assertEqual(13, items[3].quality)
+        self.assertEqual(0, items[4].quality)
 
 
 
