@@ -2,9 +2,7 @@ from Domain.Item.Item import Item
 
 class GRItem(Item):
     def __init__(self, name, sell_in, quality, conjured = False):
-        self.name = name
-        self.sell_in = sell_in
-        self.quality = quality
+        Item.__init__(self, name, sell_in, quality)
         self.conjured = conjured
 
     def updateQuality(self):
